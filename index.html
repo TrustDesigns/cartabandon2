@@ -1,0 +1,109 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Cart Abandonment Dashboard</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="abandon.css">
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <div class="title">
+        <div class="brand-badge">SK</div>
+        <div>
+          <p style="font-size:13px;color:var(--muted)">Analytics • Revenue Recovery</p>
+          <h1>Cart Abandonment Dashboard</h1>
+        </div>
+      </div>
+
+      <div style="display:flex;gap:12px;flex-wrap:wrap;align-items:center">
+        <div class="search">
+          <input type="text" placeholder="Search by customer">
+        </div>
+        <select class="select"><option>All statuses</option></select>
+        <select class="select"><option>Last 7 days</option></select>
+        <button class="btn">Export CSV</button>
+      </div>
+    </header>
+
+    <section class="stats">
+      <div class="card">
+        <h3>Total Abandoned Carts</h3>
+        <div class="big">1,842</div>
+        <p class="small">During selected date range</p>
+      </div>
+      <div class="card">
+        <h3>Recovery Rate</h3>
+        <div class="big">18.3%</div>
+        <p class="small">% of carts recovered via emails & discounts</p>
+      </div>
+      <div class="card">
+        <h3>Revenue Recovered</h3>
+        <div class="big">₦1,220,400</div>
+        <p class="small">Attributed to recovery campaigns</p>
+      </div>
+      <div class="card">
+        <h3>Avg Time to Recover</h3>
+        <div class="big">14h 22m</div>
+        <p class="small">Median recovery time</p>
+      </div>
+    </section>
+
+    <section class="table-wrap">
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Customer</th>
+            <th>Email</th>
+            <th>Products</th>
+            <th>Cart Value</th>
+            <th>Abandoned At</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Nadia Okonkwo</td>
+            <td>nadia@example.com</td>
+            <td><span class="product-pill">Glow Serum</span></td>
+            <td>₦32,400</td>
+            <td>Oct 3, 2025</td>
+            <td><span class="badge sent">Sent</span></td>
+          </tr>
+          <tr>
+            <td>Chike Emeka</td>
+            <td>chike@gmail.com</td>
+            <td><span class="product-pill">Vitamin C Toner</span></td>
+            <td>₦7,200</td>
+            <td>Oct 2, 2025</td>
+            <td><span class="badge opened">Opened</span></td>
+          </tr>
+          <tr>
+            <td>Yemi A.</td>
+            <td>yemi.a@mail.com</td>
+            <td><span class="product-pill">Face Roller</span></td>
+            <td>₦14,800</td>
+            <td>Oct 1, 2025</td>
+            <td><span class="badge recovered">Recovered</span></td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="table-foot">
+        <p>Showing 1–3 of 1,842</p>
+        <div class="pagination">
+          <button class="page-btn">1</button>
+          <button class="page-btn">2</button>
+          <button class="page-btn">3</button>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      Tip: Connect your email provider to populate recovery conversion data.
+    </footer>
+  </div>
+</body>
+</html>
